@@ -167,14 +167,14 @@ function AuthScreen({ onAuthenticated }) {
 
 function RiskBadge({ level }) {
   const colors = {
-    Low: "bg-purple-950/80 text-purple-300 border-purple-800",
-    Medium: "bg-purple-950/80 text-purple-300 border-purple-800",
-    High: "bg-purple-950/80 text-purple-300 border-purple-800",
+    Low: "bg-amber-950/80 text-amber-300 border-amber-800",
+    Medium: "bg-amber-950/80 text-amber-300 border-amber-800",
+    High: "bg-amber-950/80 text-amber-300 border-amber-800",
   };
   return (
     <span
       className={`px-3 py-1 text-xs font-semibold uppercase tracking-widest border rounded-full ${
-        colors[level] || "bg-slate-950 text-purple-200 border-purple-900"
+        colors[level] || "bg-slate-950 text-amber-200 border-amber-900"
       }`}
     >
       {level} Risk
@@ -184,7 +184,7 @@ function RiskBadge({ level }) {
 
 function GaugeChart({ score }) {
   const strokeColor =
-    "#8b5cf6";
+    "#f6ca5c";
 
   return (
     <div className="relative flex flex-col items-center justify-center my-2">
@@ -301,7 +301,7 @@ function App() {
           </span>
           <div>
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-50">
-              Credit<span className="text-purple-300">Trace</span>
+              Credit<span className="text-amber-300">Trace</span>
             </h1>
             <p className="text-slate-400 text-xs md:text-sm mt-1 tracking-[0.18em] uppercase font-sans">
               Multi-Agent MSME Credit Risk Assessment System
@@ -341,12 +341,12 @@ function App() {
           <svg viewBox="0 0 280 72" preserveAspectRatio="none">
             <defs>
               <linearGradient id="signalLine" x1="0" x2="1">
-                <stop offset="0" stopColor="#24103d" />
-                <stop offset="1" stopColor="#8b5cf6" />
+                <stop offset="0" stopColor="#312b1c" />
+                <stop offset="1" stopColor="#f6ca5c" />
               </linearGradient>
               <linearGradient id="signalFill" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" stopColor="#8b5cf6" stopOpacity="0.22" />
-                <stop offset="1" stopColor="#8b5cf6" stopOpacity="0" />
+                <stop offset="0" stopColor="#f6ca5c" stopOpacity="0.22" />
+                <stop offset="1" stopColor="#f6ca5c" stopOpacity="0" />
               </linearGradient>
             </defs>
             <path className="signal-area" d="M0 64 C34 58 38 38 70 46 S104 58 130 34 S164 46 188 28 S222 32 280 8 V72 H0Z" />
@@ -475,7 +475,7 @@ function App() {
               {loading ? "Processing Multi-Agent Flow..." : "Assess Risk Profile"}
             </button>
 
-            {error && <p className="text-purple-300 text-sm mt-3 font-sans">{error}</p>}
+            {error && <p className="text-amber-300 text-sm mt-3 font-sans">{error}</p>}
           </div>
 
           {/* FINANCIAL SUMMARY METRICS CARD */}
@@ -490,7 +490,7 @@ function App() {
                     Monthly Turnover
                   </span>
                   {/* FINANCIAL DATA FONT INCREASED */}
-                  <span className="text-xl font-semibold text-purple-300 mt-1 block">
+                  <span className="text-xl font-semibold text-amber-300 mt-1 block">
                     ₹{result.extracted.monthly_turnover?.toLocaleString("en-IN")}
                   </span>
                 </div>
@@ -511,8 +511,8 @@ function App() {
                   <span
                     className={`text-xl font-semibold mt-1 block ${
                       result.extracted.bounced_cheques_count > 0
-                        ? "text-purple-300"
-                        : "text-purple-300"
+                        ? "text-amber-300"
+                        : "text-amber-300"
                     }`}
                   >
                     {result.extracted.bounced_cheques_count}
@@ -581,9 +581,9 @@ function App() {
                       <span
                         className={`w-2 h-2 rounded-full ${
                           result
-                            ? "bg-purple-400"
+                            ? "bg-amber-400"
                             : i === 0
-                            ? "bg-purple-400 animate-ping"
+                            ? "bg-amber-400 animate-ping"
                             : "bg-slate-700"
                         }`}
                       />
@@ -623,7 +623,7 @@ function App() {
                       <span className="text-xl font-sans uppercase tracking-widest text-slate-400 block mb-1">
                         Recommendation
                       </span>
-                      <p className="text-2xl font-bold text-purple-300">
+                      <p className="text-2xl font-bold text-amber-300">
                         {result.explanation.recommendation}
                       </p>
                     </div>
@@ -648,7 +648,7 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="surface-card p-6">
                   <h3 className="text-xl font-bold text-slate-200 border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                    <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                     Key Concerns
                   </h3>
                   {/* KEY CONCERNS TEXT INCREASED */}
@@ -665,7 +665,7 @@ function App() {
 
                 <div className="surface-card p-6">
                   <h3 className="text-xl font-bold text-slate-200 border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                    <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                     Positive Factors
                   </h3>
                   {/* POSITIVE FACTORS TEXT INCREASED */}

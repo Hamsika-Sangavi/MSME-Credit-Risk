@@ -19,9 +19,9 @@
     min-height: 100vh;
     margin: 0;
     background:
-      radial-gradient(circle at 8% -10%, rgba(76, 29, 149, 0.2), transparent 32rem),
-      radial-gradient(circle at 94% 2%, rgba(49, 18, 79, 0.2), transparent 28rem),
-      #05030a;
+      radial-gradient(circle at 8% -10%, rgba(149, 115, 29, 0.2), transparent 32rem),
+      radial-gradient(circle at 94% 2%, rgba(79, 62, 18, 0.2), transparent 28rem),
+      #080705;
     color: #f5f0e5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39,20 +39,20 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #05030a;
+  background: #080705;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b1b66;
-  border: 2px solid #05030a;
+  background: #66511b;
+  border: 2px solid #080705;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6d28d9;
+  background: #d9a728;
 }
 
 textarea:focus, input:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.16);
+  box-shadow: 0 0 0 3px rgba(246, 202, 92, 0.16);
 }
